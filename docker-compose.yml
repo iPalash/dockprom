@@ -20,7 +20,7 @@ services:
       - '-config.file=/etc/prometheus/prometheus.yml'
       - '-storage.local.path=/prometheus'
       - '-alertmanager.url=http://alertmanager:9093'
-      - '-storage.local.target-heap-size=2576980377.6' #corresponds to 2.4 GB , 60 percent of 4 GB
+      - '-storage.local.target-heap-size=2576980378' #corresponds to 2.4 GB , 60 percent of 4 GB
     restart: unless-stopped
     expose:
       - 9090
