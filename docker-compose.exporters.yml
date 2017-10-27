@@ -10,9 +10,9 @@ services:
       - /sys:/host/sys:ro
       - /:/rootfs:ro
     command:
-      - '-collector.procfs=/host/proc'
-      - '-collector.sysfs=/host/sys'
-      - '-collector.filesystem.ignored-mount-points=^/(sys|proc|dev|host|etc)($$|/)'
+      - '-path.procfs=/host/proc'
+      - '-path.sysfs=/host/sys'
+      - '-path.filesystem.ignored-mount-points=^/(sys|proc|dev|host|etc)($$|/)'
     restart: unless-stopped
     ports:
       - 9100:9100
@@ -34,5 +34,3 @@ services:
     network_mode: host
     labels:
       org.label-schema.group: "monitoring"
-  
-
