@@ -50,7 +50,7 @@ services:
       org.label-schema.group: "monitoring"
 
   nodeexporter:
-    image: prom/`node`-exporter
+    image: prom/node-exporter
     container_name: nodeexporter
     volumes:
       - /proc:/host/proc:ro
